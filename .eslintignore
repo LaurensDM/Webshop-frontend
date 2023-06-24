@@ -1,0 +1,12 @@
+*.config.js
+src/reportWebVitals.js
+
+node_modules
+src/i18n.js
+src/translation/languages/en.js
+src/translation/languages/fr.js
+src/translation/languages/ned.js
+
+yarn.lock
+android
+build

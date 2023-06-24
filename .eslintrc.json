@@ -1,0 +1,43 @@
+{
+    "env": {
+        "es6": true,
+		"es2021": true,
+		"node": true,
+		"jest": true,
+        "browser": true
+    },
+    "extends": "airbnb",
+    "plugins": [
+        "import",
+        "only-warn"
+    ],
+    "ignorePatterns": ["./src/index.jsx", "**/vendor/*.js"],
+    "rules": {
+        "quotes": ["error", "single"],
+        // we want to force semicolons
+        "semi": ["error", "always"],
+        // we use 2 spaces to indent our code
+        "indent": ["error", 2],
+        // we want to avoid extraneous spaces
+        "no-multi-spaces": ["error"],
+        "max-len": ["error", { "code": 550 }],
+        "no-undef":"off",
+        // don"t throw Assignment to function parameter
+        //      I don"t understand param-reassign -> so I disabled it (bad idea!?)
+        "no-param-reassign": 0,
+        "react/jsx-no-useless-fragment" : 0,
+        // don"t throw linting error on last empty line missing
+        "eol-last": ["warn", "never"],
+
+        // Enable this if you run into linebreak issue on unix
+        // "linebreak-style": ["warning", "unix"],
+
+        // Enable this if you run into linebreak issue on windows
+        // "linebreak-style": ["warning", "windows"],
+
+        "linebreak-style" : 0,
+
+        // we gaan niet voor alles proptype definiëren toch? -> dan beter ts code schrijven?!
+        "react/prop-types": 0
+    }
+}
